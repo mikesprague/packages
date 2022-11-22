@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "useWorkspaces": true,
+  "version": "independent",
+  "useNx": true,
+  "conventionalCommits": true,
+  "changelogPreset": "conventional-changelog-gitmoji-config",
+  "signGitCommit": true,
+  "signGitTag": true,
+  "forceGitTag": true,
+  "registry": "https://npm.pkg.github.com",
+  "private": false,
+  "command": {
+    "version": {
+      "message": ":package: Prepare release",
+      "allowBranch": "main"
+    }
+  }
+}

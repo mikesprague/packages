@@ -1,0 +1,93 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "description": "Monorepo to host custom node modules that publish to GitHub Packages",
+  "type": "module",
+  "scripts": {
+    "build": "nx run-many --target=build --exclude=@mikesprague/package-starter",
+    "prebuild": "nx run-many --target=clean --exclude=@mikesprague/package-starter",
+    "bump": "lerna version --no-private --no-push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">= 18.x",
+    "npm": ">= 8.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikesprague/packages.git"
+  },
+  "publishConfig": {
+    "@mikesprague:registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikesprague/packages/issues"
+  },
+  "homepage": "https://github.com/mikesprague/packages#readme",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.19.1",
+    "conventional-changelog-gitmoji-config": "^1.4.4",
+    "cross-env": "^7.0.3",
+    "documentation": "^14.0.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "lerna": "^6.0.3",
+    "nx": "^15.2.1",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": false,
+      "commonjs": false,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "import",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "allowImportExportEverywhere": true,
+      "parser": "@eslint/babel-parser",
+      "ecmaFeatures": {
+        "impliedStrict": true,
+        "modules": true
+      },
+      "sourceType": "module"
+    },
+    "ignorePatterns": [
+      "**/.history/*",
+      "**/node_modules/*",
+      "**/dist/*"
+    ],
+    "rules": {
+      "import/prefer-default-export": "off",
+      "no-console": "warn",
+      "import/extensions": "off"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  }
+}

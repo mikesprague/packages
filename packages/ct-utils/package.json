@@ -1,0 +1,59 @@
+{
+  "name": "@mikesprague/ct-utils",
+  "version": "0.0.0",
+  "description": "Utilities and helper methods",
+  "type": "module",
+  "source": "src/index.js",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "targets": {
+    "main": {
+      "context": "node",
+      "isLibrary": true,
+      "includeNodeModules": true
+    },
+    "module": {
+      "context": "node",
+      "isLibrary": true,
+      "includeNodeModules": true
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "parcel build ./src/index.js --no-source-maps",
+    "docs": "documentation readme ./src/index.js --section=API",
+    "postbuild": "npm run docs",
+    "prebuild": "npm run clean",
+    "prestart": "npm run clean",
+    "start": "npm run watch",
+    "watch": "parcel watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "@mikesprague:registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikesprague/packages.git",
+    "directory": "packages/ct-utils"
+  },
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikesprague/packages/issues"
+  },
+  "homepage": "https://github.com/mikesprague/packages#readme",
+  "devDependencies": {
+    "parcel": "^2.8.0"
+  }
+}
