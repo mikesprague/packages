@@ -29,9 +29,12 @@ export const getAuthToken = async ({
     },
     url: `${apiBaseUrl}/auth/login`,
     method: 'POST',
+    data: {
+      UserName: username,
+      Password: password,
+    },
   };
-  // add the following manually or the conversion from object to string adds unwanted slashes in password
-  getTokenConfig.data = `{ "UserName": "${username}", "Password": "${password}" }`;
+
   const token = await axios(getTokenConfig).then((response) => response.data);
 
   return token;
@@ -64,16 +67,14 @@ export const makeApiCall = async ({
   ignoreSslErrors = false,
   userAgent = 'CIT Cloud Team Automation',
 }) => {
-  const authHeader = {
-    Authorization: `Bearer ${authToken}`,
-  };
-
   const httpClientConfig = {
     headers: {
-      ...authHeader,
+      Authorization: `Bearer ${authToken}`,
       Accept: 'application/json',
       'User-Agent': userAgent,
     },
+    url: `${apiBaseUrl}${endpointPath}`,
+    method: `${requestMethod}`,
   };
   if (ignoreSslErrors) {
     // ignore the self-signed ssl errors
@@ -90,11 +91,9 @@ export const makeApiCall = async ({
     httpClientConfig.body = requestBody;
   }
 
-  const apiData = await axios({
-    url: `${apiBaseUrl}${endpointPath}`,
-    method: `${requestMethod}`,
-    ...httpClientConfig,
-  }).then((response) => response.data);
+  const apiData = await axios(httpClientConfig).then(
+    (response) => response.data,
+  );
 
   return apiData;
 };
