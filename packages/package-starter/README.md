@@ -32,4 +32,4 @@ See API section below for docs on each method available
 
 ## Changelog
 
-[Changelog](./CHANGELOG.md)
+[Changelog](https://github.com/mikesprague/packages/blob/main/packages/package-starter/CHANGELOG.md)

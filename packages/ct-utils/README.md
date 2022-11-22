@@ -62,4 +62,4 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 ## Changelog
 
-[Changelog](./CHANGELOG.md)
+[Changelog](https://github.com/mikesprague/packages/blob/main/packages/ct-utils/CHANGELOG.md)
