@@ -1,6 +1,6 @@
 {
   "name": "@mikesprague/ct-tdx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Helper methods for working with the TeamDynamix API",
   "type": "module",
   "source": "src/index.js",
