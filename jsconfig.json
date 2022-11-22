@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "checkJs": true,
+    "esModuleInterop": false,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ESNext"],
+    "moduleResolution": "Node",
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strictFunctionTypes": true,
+  },
+  "include": ["./packages/**/src/*"],
+  "exclude": [
+    "dist",
+    "**/dist/*",
+    "node_modules",
+    "**/node_modules/*",
+    ".parcel-cache",
+    "**/.parcel-cache/*",
+    ".history",
+    "**/history/*",
+    ".git",
+    "**/git/*",
+    ".github"
+  ]
+}

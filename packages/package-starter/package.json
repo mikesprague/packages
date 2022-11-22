@@ -1,0 +1,64 @@
+{
+  "name": "@mikesprague/package-starter",
+  "version": "0.0.0",
+  "description": "Template to use for new modules",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">= 18.x",
+    "npm": ">= 8.x"
+  },
+  "source": "src/index.js",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "targets": {
+    "main": {
+      "context": "node",
+      "isLibrary": true,
+      "includeNodeModules": true,
+      "optimize": false
+    },
+    "module": {
+      "context": "node",
+      "isLibrary": true,
+      "includeNodeModules": true,
+      "optimize": false
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "parcel build ./src/index.js --no-source-maps",
+    "postbuild": "documentation readme ./src/index.js --section=API",
+    "prebuild": "npm run clean",
+    "prestart": "npm run clean",
+    "start": "npm run watch",
+    "watch": "parcel watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "@mikesprague:registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikesprague/packages.git",
+    "directory": "packages/package-starter"
+  },
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikesprague/packages/issues"
+  },
+  "homepage": "https://github.com/mikesprague/packages#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}

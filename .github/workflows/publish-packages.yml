@@ -1,0 +1,46 @@
+name: Publish to GitHub Packages
+
+on:
+  push:
+    tags: [ "@mikesprague/*" ]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "18"
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 👷  Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: 🏗️  Setup Node.js ${{ env.NODE_VERSION }} environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          check-latest: true
+          cache: npm
+          cache-dependency-path: "**/package-lock.json"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@mikesprague"
+
+      - name: ⬆️  Update npm and install dependencies
+        run: npm i --location=global npm && npm ci
+
+      - name: 📦  Build packages
+        run: npm run build
+
+      - name: 🚀  Publish packages
+        run: lerna publish from-git -y
