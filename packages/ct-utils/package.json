@@ -54,6 +54,6 @@
   },
   "homepage": "https://github.com/mikesprague/packages#readme",
   "devDependencies": {
-    "parcel": "^2.8.0"
+    "parcel": "2.8.0"
   }
 }

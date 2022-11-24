@@ -34,19 +34,19 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@babel/core": "^7.20.2",
-    "@babel/eslint-parser": "^7.19.1",
-    "conventional-changelog-gitmoji-config": "^1.4.4",
-    "cross-env": "^7.0.3",
-    "documentation": "^14.0.0",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "lerna": "^6.0.3",
-    "nx": "^15.2.1",
-    "prettier": "^2.8.0",
-    "prettier-eslint": "^15.0.1"
+    "@babel/core": "7.20.2",
+    "@babel/eslint-parser": "7.19.1",
+    "conventional-changelog-gitmoji-config": "1.4.4",
+    "cross-env": "7.0.3",
+    "documentation": "14.0.0",
+    "eslint": "8.28.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "lerna": "6.0.3",
+    "nx": "15.2.1",
+    "prettier": "2.8.0",
+    "prettier-eslint": "15.0.1"
   },
   "eslintConfig": {
     "env": {
