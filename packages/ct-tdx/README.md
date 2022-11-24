@@ -131,4 +131,4 @@ Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ## Changelog
 
-[Changelog](https://github.com/mikesprague/packages/blob/main/packages/ct-utils/CHANGELOG.md)
+[Changelog](https://github.com/mikesprague/packages/blob/main/packages/ct-tdx/CHANGELOG.md)
