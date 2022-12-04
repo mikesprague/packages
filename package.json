@@ -37,6 +37,7 @@
     "@babel/core": "7.20.5",
     "@babel/eslint-parser": "7.19.1",
     "cross-env": "7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "documentation": "14.0.0",
     "eslint": "8.28.0",
     "eslint-config-prettier": "8.5.0",
@@ -90,5 +91,10 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "all"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
