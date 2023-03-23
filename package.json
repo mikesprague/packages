@@ -48,7 +48,7 @@
     "parcel": "2.8.3",
     "prettier": "2.8.6",
     "prettier-eslint": "15.0.1",
-    "rimraf": "4.4.0"
+    "rimraf": "4.4.1"
   },
   "eslintConfig": {
     "env": {
