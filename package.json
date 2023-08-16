@@ -46,7 +46,7 @@
     "lerna": "7.1.5",
     "nx": "16.6.0",
     "parcel": "2.9.3",
-    "prettier": "3.0.1",
+    "prettier": "3.0.2",
     "prettier-eslint": "15.0.1",
     "rimraf": "5.0.1"
   },
