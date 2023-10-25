@@ -45,7 +45,7 @@
     "eslint-plugin-prettier": "5.0.1",
     "lerna": "7.4.1",
     "nx": "17.0.1",
-    "parcel": "2.10.0",
+    "parcel": "2.10.1",
     "prettier": "3.0.3",
     "prettier-eslint": "16.1.1",
     "rimraf": "5.0.5"
