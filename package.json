@@ -47,7 +47,7 @@
     "nx": "17.2.8",
     "parcel": "2.11.0",
     "prettier": "3.2.4",
-    "prettier-eslint": "16.2.0",
+    "prettier-eslint": "16.3.0",
     "rimraf": "5.0.5"
   },
   "eslintConfig": {
