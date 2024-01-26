@@ -35,7 +35,7 @@
   ],
   "devDependencies": {
     "@babel/core": "7.23.7",
-    "@babel/eslint-parser": "7.23.3",
+    "@babel/eslint-parser": "7.23.9",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "documentation": "14.0.2",
