@@ -43,7 +43,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-prettier": "5.5.4",
-    "lerna": "9.0.0",
+    "lerna": "9.0.1",
     "nx": "22.0.3",
     "parcel": "2.16.1",
     "prettier": "3.6.2",
